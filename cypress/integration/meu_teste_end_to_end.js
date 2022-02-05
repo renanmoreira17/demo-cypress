@@ -27,14 +27,14 @@ describe('Teste End-to-End', () => {
         cy.get('.swal-button').click()
     })
     it('Teste 4: Realiza compra', () => {
-        // Calcula o frete
+        // Realiza a compra
         cy.get('[data-id=3]').within(() => {
             cy.contains('Comprar').click().then
             cy.wait(2000);
         })
         cy.get('.swal-text').contains('Sua compra foi realizada com sucesso')
 
-        // Fecha o pop-up com o preço do frete
+        // Fecha o pop-up com mostrando que a compra foi concluída
         cy.get('.swal-button').click()
     })
 })
